@@ -17,6 +17,8 @@ This is just a kickstart guideline how to setup a basic k8s-cluster with an ingr
 
 ### 2nd: install basic tools
 
+Manage request to the services.
+
 ### ingress controller
 * install ingress controller via helm:
   ```sh
@@ -27,6 +29,9 @@ This is just a kickstart guideline how to setup a basic k8s-cluster with an ingr
   * configuration options during the setup https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/
 
 ### cert-manager
+
+Let's encrypt support for your http traffic.
+
 * install cert-manager via helm
   ```sh
   kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.15.1/cert-manager.crds.yaml
@@ -70,7 +75,7 @@ cd kubernetes-ionos-example
 kubectl apply -f demo/001-echo-service.yaml
 
 # create a simple whoami-service
-kubectl apply -f demo/003-whoami-service.yaml
+kubectl apply -f demo/002-whoami-service.yaml
 
 # setup ingress to get the domain up and running (without tls)
 kubectl apply -f demo/003-ingress-without-tls.yaml
