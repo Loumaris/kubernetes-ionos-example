@@ -79,7 +79,7 @@ kubectl apply -f demo/003-ingress-without-tls.yaml
 kubectl apply -f demo/004-certificate.yaml
 
 # setup ingress with the new certificate
-kubectl apply -f demo/0005-ingress-with-tls.yaml
+kubectl apply -f demo/005-ingress-with-tls.yaml
 ```
 
 Now you can reach `https://example.org` and `https://example.org/who` :) Feel free to add new services ;-)
@@ -91,7 +91,7 @@ Now you can reach `https://example.org` and `https://example.org/who` :) Feel fr
 You can alway update the yaml and apply it via
 `kubectl apply -f <service.deployment.yml>`
 
-## option 2: patch via kubectl
+### option 2: patch via kubectl
 
 For CI/CD you can change the image via kubectl directly:
 `kubectl set image deployment/<service_name> <service_name>=$CONTAINER_RELEASE_IMAGE --record`
