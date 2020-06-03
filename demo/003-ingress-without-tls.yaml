@@ -1,0 +1,21 @@
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: example
+  namespace: default
+spec:
+  rules:
+    - host: example.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: echo
+              servicePort: 5678
+          - path: /who
+            backend:
+              serviceName: whoami
+              servicePort: 80
