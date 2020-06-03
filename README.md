@@ -72,10 +72,10 @@ git clone git@github.com:Loumaris/kubernetes-ionos-example.git
 cd kubernetes-ionos-example
 
 # create a simple echo service
-kubectl apply -f demo/001-echo-service.yaml
+kubectl apply -f demo/001-echo-pod.yaml
 
 # create a simple whoami-service
-kubectl apply -f demo/002-whoami-service.yaml
+kubectl apply -f demo/002-whoami-deployment.yaml
 
 # setup ingress to get the domain up and running (without tls)
 kubectl apply -f demo/003-ingress-without-tls.yaml
