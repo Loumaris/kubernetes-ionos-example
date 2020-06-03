@@ -1,4 +1,4 @@
-# managed kubernetes @ionos
+# managed kubernetes @ionos-enterprise
 
 About kubernetes@ionos: https://www.ionos.de/enterprise-cloud/managed-kubernetes
 
