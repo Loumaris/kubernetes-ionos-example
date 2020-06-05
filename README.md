@@ -85,6 +85,16 @@ kubectl apply -f demo/004-certificate.yaml
 
 # setup ingress with the new certificate
 kubectl apply -f demo/005-ingress-with-tls.yaml
+
+######
+## next steps are only for graylog as central logging service
+######
+
+# create a config map for fluentd
+kubectl apply -f demo/006-fluentd-setup-config.yaml
+
+# setup fluentd daemonset - you need to change the ENV
+kubectl apply -f demo/007-fluentd-setup.yaml
 ```
 
 Now you can reach `https://example.org` and `https://example.org/who` :) Feel free to add new services ;-)
