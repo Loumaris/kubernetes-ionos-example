@@ -34,9 +34,8 @@ Let's encrypt support for your http traffic.
 
 * install cert-manager via helm
   ```sh
-  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.15.1/cert-manager.crds.yaml
-  kubectl create namespace cert-manager
-  helm install cert-manager --namespace cert-manager jetstack/cert-manager
+  kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.crds.yaml
+  helm install cert-manager cert-manager --namespace cert-manager --create-namespace --repo https://charts.jetstack.io
   ```
 * create a cluster issuer for the `cert-manager`:
   ```yaml
