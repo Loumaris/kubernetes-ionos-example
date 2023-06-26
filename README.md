@@ -40,7 +40,7 @@ Let's encrypt support for your http traffic.
   ```
 * create a cluster issuer for the `cert-manager`:
   ```yaml
-  apiVersion: cert-manager.io/v1alpha2
+  apiVersion: cert-manager.io/v1
   kind: ClusterIssuer
   metadata:
     name: letsencrypt-prod
